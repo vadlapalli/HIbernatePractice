@@ -1,0 +1,5 @@
+package com.hibernate.app01.Dao;
+
+public interface ProductDao {
+
+}
