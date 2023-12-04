@@ -16,7 +16,9 @@ public class ProductDaoImpl implements ProductDao {
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 		Integer id=(Integer) session.save(entity);
-		return null;
+		transaction.commit();
+		session.close();
+		return id;
 	}
 
 }

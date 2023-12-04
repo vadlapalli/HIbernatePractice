@@ -6,15 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-
 @Entity
-@Table(name="TBL_PRODUCTS")
 public class ProductEntity {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -27,9 +25,7 @@ public class ProductEntity {
 	@CreationTimestamp
 	private LocalDateTime dateCreated;
 	@UpdateTimestamp
-	private LocalDateTime dateUpdatd;
-	
-	
+	private LocalDateTime dateUpdated;
 	public Integer getId() {
 		return id;
 	}
@@ -72,15 +68,20 @@ public class ProductEntity {
 	public void setDateCreated(LocalDateTime dateCreated) {
 		this.dateCreated = dateCreated;
 	}
-	public LocalDateTime getDateUpdatd() {
-		return dateUpdatd;
+	public LocalDateTime getDateUpdated() {
+		return dateUpdated;
 	}
-	public void setDateUpdatd(LocalDateTime dateUpdatd) {
-		this.dateUpdatd = dateUpdatd;
+	public void setDateUpdated(LocalDateTime dateUpdated) {
+		this.dateUpdated = dateUpdated;
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "ProductEntity [id=" + id + ", name=" + name + ", description=" + description + ", unitPrice="
+				+ unitPrice + ", available=" + available + ", unitsInStock=" + unitsInStock + ", dateCreated="
+				+ dateCreated + ", dateUpdated=" + dateUpdated + "]";
+	}
 	
 	
-
 }

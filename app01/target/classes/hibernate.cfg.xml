@@ -17,10 +17,12 @@
         <property name="hibernate.show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        
 
         <!-- Mention annotated entity class locations -->
-        <mapping class="com.hibernate.app01.entity"/>
+        <mapping class="com.hibernate.app01.entity.ProductEntity"/>
         <!-- Add more entity classes if needed -->
 
     </session-factory>

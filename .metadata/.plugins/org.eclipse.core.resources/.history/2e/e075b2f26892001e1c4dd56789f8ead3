@@ -1,0 +1,6 @@
+package com.hibernate.app01.entity;
+
+
+public class ProductEntity {
+	
+}
