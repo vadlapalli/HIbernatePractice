@@ -1,5 +1,0 @@
-package com.hibernate.app01.utils;
-
-public class HibernateUtils {
-
-}
